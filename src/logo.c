@@ -4,7 +4,7 @@
 #include "scenes.h"
 
 Sprite* logo;
-const int FADE_LENGTH = 30; // fade length in frames
+const int FADE_LENGTH = 100; // fade length in frames
 int start_frame;
 int fade_step; // frames per fade unit
 
@@ -43,7 +43,7 @@ void logo_start() {
 
     pal_gradient_ex(pal_bg_mem, 1, 4, 0x6F98, 0x4964);
 
-    tte_printf("#{P:12,12}#{ci:1}fountain #{ci:3}v2.0");
+    tte_printf("#{P:12,12}#{ci:1}ruga test");
     tte_printf("#{P:12,24}#{ci:2}¯¯¯¯¯¯¯¯¯");
 }
 
@@ -60,7 +60,7 @@ void logo_update() {
     }
     if (progress > FADE_LENGTH * 2) {
         // done
-        dusk_scene_set(fountain_scene);
+        dusk_scene_set(rugatest_scene);
     }
 
     // update sprites
