@@ -24,9 +24,7 @@ void rugaroom_start() {
     ship = dusk_sprites_make(0, 18, 21,
                                (Sprite){.x = SCREEN_WIDTH / 2 - 8,
                                         .y = SCREEN_HEIGHT / 2 - 8,
-                                        .base_tid = 32,
-                                        .page = 0,
-                                        .flags = SPRITEFLAG_PRIORITY(3)});
+                                        .base_tid = 0,});
 }
 
 void rugaroom_update() {
