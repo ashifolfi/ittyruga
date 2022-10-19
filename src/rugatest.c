@@ -21,10 +21,11 @@ void rugaroom_start() {
     dusk_sprites_upload_atlas(&atlas);
 
      // make ship sprite (&sprites[0])
-    ship = dusk_sprites_make(0, 18, 21,
-                               (Sprite){.x = SCREEN_WIDTH / 2 - 8,
-                                        .y = SCREEN_HEIGHT / 2 - 8,
-                                        .base_tid = 0,});
+    ship = dusk_sprites_make(0, 32, 32,
+            (Sprite){.x = SCREEN_WIDTH / 2,
+                    .y = SCREEN_HEIGHT / 2,
+                    .base_tid = 0,
+    });
 }
 
 void rugaroom_update() {
