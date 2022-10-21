@@ -7,6 +7,8 @@
 
 #include "ship.h"
 
+using namespace ittyruga;
+
 int main()
 {
     bn::core::init();
@@ -15,9 +17,7 @@ int main()
 
     while(true)
     {
-        
-
-
+        ittyruga.update(true);
         bn::core::update();
     }
 }
