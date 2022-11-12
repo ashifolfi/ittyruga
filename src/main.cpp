@@ -1,3 +1,9 @@
+/*
+    Ittyruga main.cpp
+    
+    (C) 2022 by K. "ashifolfi" J.
+*/
+
 #include "bn_core.h"
 #include "bn_math.h"
 #include "bn_keypad.h"
@@ -7,17 +13,23 @@
 
 #include "ship.h"
 
+#include "entitymanager.h"
+
 using namespace ittyruga;
 
 int main()
 {
     bn::core::init();
 
-    ship ittyruga = ship();
+    //ship ittyruga = ship();
+    
+    entitymanager EntMan = entitymanager();
+    
+    EntMan.addEntity(new ship());
 
     while(true)
     {
-        ittyruga.update(true);
         bn::core::update();
+        EntMan.update();
     }
 }

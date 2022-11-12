@@ -1,9 +1,8 @@
-#ifndef IR_SHIP_H
-#define IR_SHIP_H
+#ifndef IR_PROJBASE_H
+#define IR_PROJBASE_H
 
 #include "bn_core.h"
 #include "bn_display.h"
-#include "bn_sprite_items_ship.h"
 #include <bn_fixed_point.h>
 
 #include "entity.h"
@@ -11,16 +10,15 @@
 namespace ittyruga
 {
 
-    class ship : public entity
+    class projectile : public entity
     {
     public:
-        ship();
+        projectile(int polarity);
 
         void update(bool visible) override;
-        void swap_polarity();
     private:
-        int polarity = 1;
-        int lastpolarity = 1;
+        int polarity = 0;
+        // no last polarity as projectiles have fixed polarity
     };
 
 };
